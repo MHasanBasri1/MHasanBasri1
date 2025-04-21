@@ -1,0 +1,177 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>M Hasan Basri | Portfolio</title>
+  <link
+  rel="stylesheet"
+  href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css"
+/>
+
+  <link rel="stylesheet" href="style.css" />
+
+  <style>
+    .glow-border {
+      border: none;
+      box-shadow: 0 0 15px #0ea5e9;
+      box-sizing: border-box;
+    }
+
+    .btn.glow-border {
+      display: inline-block;
+      padding: 10px 20px;
+      text-decoration: none;
+      color: white;
+      background-color: #0ea5e9;
+      border-radius: 10px;
+      font-weight: bold;
+      box-shadow: 0 0 15px #0ea5e9;
+    }
+
+    .home-img img,
+    .about-img img {
+      border-radius: 50%;
+      width: 250px;
+      height: 250px;
+      box-shadow: 0 0 20px rgba(14, 165, 233, 0.8);
+      transition: transform 0.3s ease;
+    }
+
+    .home-img img:hover,
+    .about-img img:hover {
+      transform: scale(1.1);
+    }
+
+    .home-content h1 span,
+    .home-content h3 span {
+      color: inherit;
+    }
+  </style>
+</head>
+<body>
+  <header>
+    <h2 class="logo">M Hasan Basri</h2>
+    <nav class="navbar">
+      <a href="#home">Home</a>
+      <a href="#about">About</a>
+      <a href="#skills">Skills</a>
+      <a href="#portfolio">Portfolio</a>
+      <a href="#contact">Contact</a>
+    </nav>
+  </header>
+  
+  <section class="home" id="home">
+    <div class="home-content">
+      <h1>Hey Broo, Saya<br><span>M Hasan Basri</span></h1>
+      <h3>Saya Adalah <span>Mahasiswa Teknik Informatika</span></h3>
+      <div class="typing-container">
+        <p id="typing-text"></p>
+      </div>
+      
+      <div class="socials">
+        <a href="#" class="social-icon"><i class="fab fa-linkedin"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-github"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-instagram"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-tiktok"></i></a>
+        <a href="#" class="social-icon"><i class="fab fa-facebook"></i></a>
+      </div>
+      <a href="#about" class="more-about-btn">More About Me</a>
+    
+    </div>
+  
+    <div class="home-img">
+      <img src="images/cat-avatar.jpg.jpg" alt="avatar" />
+    </div>
+  </section>
+
+  <section class="about" id="about">
+    
+    <div class="about-img">
+      <img src="images/cat-avatar.jpg.jpg" alt="avatar" />
+    </div>
+    <div class="about-content">
+      <h2>About <span>Me</span></h2>
+      <div class="typing-container">
+        <p id="typing-text-about"></p>
+      </div>
+      <a href="#journey" class="see-my-journey-btn">See My Journey</a>
+    </div>
+  </section>
+
+  <section class="skills" id="skills">
+    <h2>My <span>Skills</span></h2>
+    <div class="skills-container">
+      <div class="skill-item">
+        <i class="fa-brands fa-html5"></i>
+        <h3>HTML</h3>
+      </div>
+      <div class="skill-item">
+        <i class="fa-brands fa-css3-alt"></i>
+        <h3>CSS</h3>
+      </div>
+      <div class="skill-item">
+        <i class="fa-solid fa-database"></i> 
+        <h3>MySQL</h3>
+      </div>
+      <div class="skill-item">
+        <i class="fa-brands fa-java"></i> 
+        <h3>Java</h3>
+      </div>
+    </div>
+</section>
+
+  <section class="portfolio" id="portfolio">
+    <h2><span>My</span> <span class="colored">Portfolio</span></h2>
+    <div class="portfolio-items">
+      <div class="portfolio-item glow-border">
+        <img src="images/projek1.jpg" alt="Project 1" />
+        <h3>Project 1</h3>
+      </div>
+      <div class="portfolio-item glow-border">
+        <img src="images/projek2.jpg" alt="Project 2" />
+        <h3>Project 2</h3>
+      </div>
+      <div class="portfolio-item glow-border">
+        <img src="images/projek3.jpg" alt="Project 3" />
+        <h3>Project 3</h3>
+      </div>
+    </div>
+  </section>
+
+  <footer id="contact">
+    <p>&copy; 2025 M Hasan Basri | All Rights Reserved</p>
+  </footer>
+
+  <script>
+    const textHome = "Saya tertarik dalam UI/UX design, keamanan siber, dan kecerdasan buatan (AI). Dalam UI/UX, saya fokus pada antarmuka yang menarik dan mudah digunakan. Di bidang keamanan siber, saya mempelajari cara melindungi data dan sistem dari ancaman digital. Sedangkan AI, saya eksplorasi untuk menciptakan solusi cerdas yang dapat mengubah cara kita bekerja dan hidup. Ketiga minat ini mendorong saya untuk terus belajar dan berinovasi."
+    const typingElementHome = document.getElementById("typing-text");
+    let indexHome = 0;
+    function typeHome() {
+      if (indexHome < textHome.length) {
+        typingElementHome.innerHTML += textHome.charAt(indexHome);
+        indexHome++;
+        setTimeout(typeHome, 30);
+      }
+    }
+
+    
+    const textAbout = "Saya memiliki ketertarikan yang mendalam pada desain antarmuka pengguna, dimana saya fokus pada pembuatan pengalaman yang intuitif dan mudah diakses bagi setiap pengguna. Selain itu, saya juga tertarik dalam bidang keamanan siber, terutama dalam memahami dan merancang solusi untuk melindungi data dan sistem dari ancaman yang semakin kompleks. Tidak hanya itu, saya juga bersemangat mengeksplorasi potensi kecerdasan buatan untuk menciptakan sistem yang cerdas dan efisien, yang dapat membawa perubahan signifikan dalam berbagai sektor industri, mulai dari otomasi hingga pengambilan keputusan berbasis data."
+    const typingElementAbout = document.getElementById("typing-text-about");
+    let indexAbout = 0;
+
+    function typeAbout() {
+      if (indexAbout < textAbout.length) {
+        typingElementAbout.innerHTML += textAbout.charAt(indexAbout);
+        indexAbout++;
+        setTimeout(typeAbout, 30);
+      }
+    }
+
+    window.addEventListener("DOMContentLoaded", function () {
+      typeHome();
+      typeAbout();
+    });
+  </script>
+</body>
+</html>
